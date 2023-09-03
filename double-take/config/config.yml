@@ -1,0 +1,19 @@
+# Double Take
+# Learn more at https://github.com/skrashevich/double-take/#configuration
+
+mqtt:
+  host: raspberrypi.local
+
+frigate:
+  url: http://raspberrypi.local:5000
+detectors:
+  rekognition:
+      aws_access_key_id: <KEY_ID>
+      aws_secret_access_key: <ACCESS_KEY>
+      aws_region: us-west-2
+      collection_id: double-take
+      # require opencv to find a face before processing with detector
+      opencv_face_required: true
+      # only process images from specific cameras, if omitted then all cameras will be processed
+      cameras:
+        - front-door

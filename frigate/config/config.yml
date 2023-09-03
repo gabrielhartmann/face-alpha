@@ -17,7 +17,7 @@ cameras:
       height: 500
     ffmpeg:
       inputs:
-        - path: rtsp://admin:lemonsink347@192.168.86.38:554/cam/realmonitor?channel=1&subtype=0
+        - path: rtsp://<user>:<password>@192.168.86.38:554/cam/realmonitor?channel=1&subtype=0
           roles:
             - detect
       hwaccel_args: preset-rpi-64-h264
